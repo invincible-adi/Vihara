@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block content %}
+  {% for a in edata %}
+<div class="container">
+    <center><h1 class="mt-5">{{a.event_des}}</h1></center>
+    <div class="row m-5">
+        <div class="col-lg-6">
+            <img src="/{{a.event_picture}}" alt="" height="500px" width="500px">
+        </div>
+        <div class="col-lg-6">
+            <p style="color:#b7666f; font-size:20px;">
+                {{a.event_detail}}
+            </p>
+            <form method="get" action="/user/booking/">
+            <input type="hidden" name="title" value="{{i.event_category}}">
+            <input type="hidden" name="epic" value="{{i.event_picture}}">
+<!--            <input type="hidden" name="sname" value="{{i.speaker_name}}">-->
+<!--            <input type="hidden" name="spic" value="{{i.speaker_picture}}">-->
+<!--            <input type="hidden" name="city" value="{{i.city}}">-->
+<!--            <input type="hidden" name="hotel" value="{{i.hotel}}">-->
+            <input type="hidden" name="price" value="{{i.price}}">
+            <input type="hidden" name="edate" value="{{i.event_date}}">
+            <input type="submit" value="Book Now" class="btn bg-mycolor text-light">
+        </form>
+        </div>
+    </div>
+    <div class="row m-5">
+        <div class="col-lg-3">
+            <h3>Details</h3>
+
+            <h6>Start</h6>
+            {{a.event_s}}
+            <h6>End</h6>
+            {{a.event_e}}
+            <h6>Event Category</h6>
+            {{a.event_category}}
+
+        </div>
+        <div class="col-lg-3">
+            <h2>Organizer</h2>
+                {{a.event_org}}
+            <h6>Phone</h6>
+                {{a.event_mob}}
+            <h6>Email</h6>
+                {{a.event_mail}}
+        </div>
+        <div class="col-lg-3">
+
+            <h2>Venue</h2>
+            {{a.event_add}}
+            <h6>Phone</h6>
+            {{a.event_phn}}
+        </div>
+        <div class="col-lg-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14390.43879402245!2d82.37773264999998!3d25.61788265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695194381696!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+            .outer{
+                height:1200px;
+                width:1200px;
+                box-sizing:border-box;
+                padding-left:150px;
+            }
+            .a{
+                height:600px;
+                width:1200px;
+            }
+            .b
+            {
+                height:600px;
+                width:1200px;
+            }
+            .a1{
+                height:580px;
+                width:580px;
+                float:left;
+                margin-right:15px;
+                margin-left:5px;
+                background-color:#ffefe2;
+            }
+            .a2{
+                height:580px;
+                width:580px;
+                float:left;
+                background-color:#ffefe2;
+            }
+            .a21{
+                height:300px;
+                width:600px;
+            }
+            .a21a{
+                height:290px;
+                width:290px;
+                float:left;
+                margin:2px;
+            }
+            .a21b{
+                height:290px;
+                width:290px;
+                float:left;
+            }
+            .a22{
+                height:300px;
+                width:600px;
+                margin-bottom:10px;
+            }
+
+            .bimg {
+            height:550px;
+            width:550px;
+            padding:10px;
+            transition:all 5s;
+            }
+            .simg {
+            height:225px;
+            width:250px;
+            padding:10px;
+            transition:.3s;
+            }
+<!--            .sgimg:hover {-->
+<!--                height:350px;-->
+<!--                width:350px;-->
+<!--                border:3px solid black;-->
+<!--                transform: rotate(360deg);-->
+<!--            }-->
+<!--            .bgimg:hover {-->
+<!--                height:650px;-->
+<!--                width:650px;-->
+<!--                border:3px solid black;-->
+<!--                transform: rotate(360deg);-->
+<!--            }-->
+
+{% endblock %}
+
+{% block content %}
+        <div class="row" id="gallery" style="background:#ffefe8;">
+            <center style="margin-top:100px;">
+                <h6 style="font-family:century;">GALLERY</h6>
+                <p style="font-size:50px; font-family:cooper black;"><b>View the Gallery<br>of Our Temple</b></p>
+            </center>
+            <div class="row igallery">
+        <div class="col-lg-12 col-md-8 col-sm-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static 'images/v20.jpg' %}" style="margin-left:100px; margin-bottom:20px;" height="580px" width="600px">
+                </div>
+                <div class="col-lg-6">
+                    <div class="row" style="margin-bottom:20px; margin-right:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v21.jpg' %}" height="280px" width="290px">
+                        </div>
+                        <div class="col-lg-6" >
+                            <img src="{% static 'images/v22.jpg' %}" height="280px" width="290px">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-right:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v23.jpg' %}" height="280px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v24.jpg' %}" height="280px" width="290px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row" style="margin-left:90px; margin-bottom:20px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v25.jpg' %}" height="290px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v26.jpg' %}" height="290px"
+                                    width="290px">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v27.jpg' %}" height="290px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v28.jpg' %}" height="290px"
+                                    width="290px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'images/v29.jpg' %}"  height="600px" width="600px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

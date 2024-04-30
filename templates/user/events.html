@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Events
+{% endblock %}
+
+{% block style %}
+
+{% endblock %}
+
+{% block content %}<!--class="container"-->
+<div class="text-center fs-2" style="width:100%; font-weight:bold;"> Upcoming Events</div>
+<div class="row">
+  <div class="col-10" style="margin-left:100px; margin-top:30px;">
+    {% for a in edata %}
+    <div class="row">
+      <div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/{{a.event_picture}}" class="rounded-start" style="height:210px; width:350px;"  alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div style="padding-top:0px; padding-left:5px; color:#db4242; font-weight:bold;font-size:20px; background:#fff0e3; height:70px; width:70px;  transform:translateX(-110px) translateY(50px)" >{{a.event_date}}</div>
+        <div class="card-title" style=" font-weight:bold;font-size:20px;">{{a.event_des}}<br/>
+        <p class="card-text"><small class="text-body-secondary">{{a.event_time}}</small></p>
+        <a href="/user/viewsdetails/?msg={{a.id}}" style="border-radius:30px; background:#db4242; text-decoration:none; color:white;" class="btn"> More Info</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

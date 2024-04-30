@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+.id{
+        margin-top:20px;
+        height:40px;
+        width:250px;
+        border:2px solid #f6e0ce;
+        border-radius:40px;
+        }
+{% endblock %}
+{% block content %}
+<div class="join row" style="background:#ffefe2;padding:120px 0px;">
+    <form action="" method="post">
+            {% csrf_token %}
+            <h5 style="padding-top:20px;font-family:century; color:#fd8f8f;" class="fs-4 text-center">Join</h5>
+            <h1 class="px-auto text-center" style="font-size:60px; font-family:cooper black; color:#44233b;">Learn To Be Sustainably Happy!</h1>
+            <p class="text-center pt-2 fs-4" style="font-size:20px; color:#7a5f6c;">Join the Happiness Program. Experience a calm mind, reduced anxiety, increased energy levels and sustainable<br> happiness everyday!</p>
+            <input type="text" required name="name" style="margin-left:200px; width:350px;" class="id fs-4 ps-4" placeholder=" Name*" >
+            <input type="text" required name="mobile" style="margin-left:50px; width:350px;" class="id fs-4 ps-4" placeholder=" Mobile Number*" >
+            <input type="text" required name="email" style="margin-left:50px; width:350px;" class="id fs-4 ps-4" placeholder=" Email Address*" ><br>
+            <center><span class="fs-4 text-center pt-5" style="color:#755968;"><input type="checkbox" style="height:20px; width:20px; border-color:#755968;"> I agree that my submitted data is being collected and stored.</span></center>
+            <input class="btn fs-5 p-0 text-center" type="submit" value="Join" style="height:65px; margin-left:650px; margin-top:20px; width:200px; background:#fd8f8f; color:#694c5c; border-radius:30px">
+    </form>
+</div>
+{% endblock %}

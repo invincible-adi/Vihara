@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+            :root {
+                --bgcolor: #7e4555;
+                --txtcolor: #341727;
+            }
+
+            .bg-mycolor {
+                background: var(--bgcolor) !important;
+            }
+
+            .txt-mycolor {
+                color: var(--txtcolor) !important;
+            }
+
+            .menu {
+                transform: translateX(30px);
+            }
+
+            .lg {
+                transform: translateX(5px);
+            }
+
+            .pg {
+                color: red;
+            }
+
+            .pg:hover {
+                color: #7e4555;
+            }
+
+            .bt {
+                height: 50px;
+                width: 120px;
+                margin-top: 50px;
+                background: #7e4555;
+                border-radius: 40px;
+            }
+
+            .cmnty {
+                box-sizing: bored-box;
+                background:url({% static 'images/v19.jpg' %});
+                background-size: cover;
+            }
+            .bimg {
+            height:550px;
+            width:550px;
+            padding:10px;
+            }
+            .simg {
+            height:225px;
+            width:250px;
+            padding:10px;
+            }
+            progress {
+                opacity: 0;
+            }
+            .progress-container {
+                position: relative;
+                display: inline-block;
+                background: #f6e0ce;
+                height: 40px;
+                border-radius: 25px;
+                overflow: hidden;
+            }
+            .progress-container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 75%;
+                background: #db4242;
+            }
+            .btt{
+            height:60px;
+            color:black;
+            margin-right:8px;
+            font-size:18px;
+            background:#f6e0ce;
+            width:100px;
+            margin-left:0px;
+            border:none;
+            border-radius:50px;
+            }
+            .btt:hover{
+            color:#fd9aaa;
+            background:#fff0e5;
+            }
+            .ide{
+            margin-top:20px;
+            height:40px;
+            width:500px;
+            border:2px solid #f6e0ce;
+            border-radius:40px;
+            }
+            .l1{
+            height:900px;
+            background-image:url({% static 'images/v22.jpg' %});
+            background-size:cover;
+            background-postion:center;
+            }
+            .l2{
+            height:450px;
+            background-image:url({% static 'images/v30.jpg' %});
+            background-size:cover;
+            }
+            .l3{
+            height:450px;
+            background-image:url({% static 'images/v26.jpg' %});
+            background-size:cover;
+            }
+            .bc{
+            background:rgba(125, 0, 0, 1/ .2);
+            }
+
+
+{% endblock %}
+
+{% block content %}
+
+                <!--start slider-->
+        <div id="carouselExampleCaptions" class="carousel slide my-0" data-bs-ride="carousel" style="height:10%; margin:0; padding:0;">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="{% static 'images/v3.jpg' %}" class="d-block w-100 " height="650px" alt="..."
+                                >
+                            <div class="carousel-caption fs-1">
+                                <p>"Three Things Cannot Be Long Hidden:<br>The Sun,The Moon And The Truth."</p>
+                                <h5>Buddha</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="{% static 'images/v6.jpg' %}" class="d-block w-100 " height="650px" alt="Ganesh Ji"
+                                >
+                            <div class="carousel-caption fs-1">
+                                <p>"Faith Becomes Lame,When It Ventures<br>Into Matters Pretaining To Reason."</p>
+                                <h5>Mahatma Gandhi</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="{% static 'images/v1.jpg' %}" class="d-block w-100 " height="650px" alt="..."
+                                >
+                            <div class="carousel-caption fs-1">
+                                <p>No One Save Us But Ourselves.<br>We Ourselves Must Walk The Path</p>
+                                <h5 class="">Buddha</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!--end slider-->
+        <div class="row text-center mx-1" id="events" style="width:100%; padding-top:150px; padding-bottom:30px; background:#ffefe2;">
+            <h6 class="fs-5" style="font-weight:bold;font-family: Courier New, Courier, monospace; color:#feb1ad;">
+                PROGRAMS</h6>
+            <p class="fs-1" style="color:#44233b; font-weight:bold;">Meditation,Yoga,Retreats,Free<br>Programs & More...
+            </p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 m-6">
+                    <img src="{% static 'images/v11.webp' %}" height="260px" width="400" alt="" srcset=""><br>
+                    <h2 style="margin-top:80px;" class="pg">The Happiness <br>Program</h2>
+                    <p style="margin-top:30px;  font-size:18px;" class="txt-mycolor">The practical knowledge of
+                        breathing<br> techniques gives you balance and<br> wisdom.</p>
+                    <button class="btn bt mb-3" style="color:white; font-weight:bold;">More Info</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 m-6">
+                    <img src="{% static 'images/v13.jpg' %}" height="260px" width="400" alt="" srcset=""><br>
+                    <h2 style="margin-top:80px;" class="pg">Sahaj Samadhi<br> Meditation</h2>
+                    <p style="margin-top:30px;  font-size:18px;" class="txt-mycolor">The state of samadhi will help
+                        you<br> experience deep inner peace as well as <br>increase self-awareness.</p>
+                    <button class="btn bt mb-3" style="color:white; font-weight:bold;">More Info</button>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 m-6">
+                    <img src="{% static 'images/v4.jpg' %}" height="260px" width="400" alt="" srcset=""><br>
+                    <h2 style="margin-top:80px;" class="pg">Advanced Meditation<br> Program</h2>
+                    <p style="margin-top:30px; font-size:18px;" class="txt-mycolor">For an extraordinary sense of peace,
+                        you<br> have to go beyond your habitual active <br>mind.</p>
+                    <button class="btn bt mb-1" style="color:white; font-weight:bold;">More Info</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-1" style=" ">
+            <div class="col-12 cmnty">
+                <div class="row ">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5" style="padding-top:110px;padding-bottom:50px; ">
+                        <img src="{% static 'images/v18.webp' %}" alt="">
+                    </div>
+                    <div class="col-lg-5 " style="padding-top:150px; padding-left:80px;padding-bottom:50px;">
+                        <h6 style="color:#fd8f8f; font-family:century;">WELCOME</h6>
+                        <h1 class="text-light" style="font-family:cooper black;"><b>Experience Yoga At Our<br>Vihara
+                                Ashram<br>Community</b></h1>
+                        <p style="color:#bea4a3;">We are happy to see newcomers at<br>any of our yoga and
+                            meditation<br>classes.Join the community to <br>participate in the center's life and<br> the
+                            discussion club.</p>
+                        <button style="height:40px; width:120; background:#db4242; border:none; border-radius:30px; color:white;">Read
+                            More</button>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-1" id="gallery" style="background:#ffefe8;">
+            <center style="margin-top:100px;">
+                <h6 style="font-family:century;">GALLERY</h6>
+                <p style="font-size:50px; font-family:cooper black;"><b>View the Gallery<br>of Our Temple</b></p>
+            </center>
+            <div class="row igallery">
+        <div class="col-lg-12 col-md-8 col-sm-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static 'images/v20.jpg' %}" style="margin-left:100px; margin-bottom:20px;" height="580px" width="600px">
+                </div>
+                <div class="col-lg-6">
+                    <div class="row" style="margin-bottom:20px; margin-right:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v21.jpg' %}" height="280px" width="290px">
+                        </div>
+                        <div class="col-lg-6" >
+                            <img src="{% static 'images/v22.jpg' %}" height="280px" width="290px">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-right:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v23.jpg' %}" height="280px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v24.jpg' %}" height="280px" width="290px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row" style="margin-left:90px; margin-bottom:20px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v25.jpg' %}" height="290px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v26.jpg' %}" height="290px"
+                                    width="290px">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:90px;">
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v27.jpg' %}" height="290px" width="290px">
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'images/v28.jpg' %}" height="290px"
+                                    width="290px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'images/v29.jpg' %}"  height="600px" width="600px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        <div class="join row mx-1" style="background:#ffefe2;padding:120px 0px;">
+            <h5 style="padding-top:20px;font-family:century; color:#fd8f8f;" class="fs-4 text-center">Join</h5>
+            <h1 class="px-auto text-center" style="font-size:60px; font-family:cooper black; color:#44233b;">Learn To Be Sustainably Happy!</h1>
+            <p class="text-center pt-2 fs-4" style="font-size:20px; color:#7a5f6c;">Join the Happiness Program. Experience a calm mind, reduced anxiety, increased energy levels and sustainable<br> happiness every day !</p>
+            <input type="text" style="margin-left:200px; width:350px;" class="ide fs-4 ps-4" placeholder=" Name*" >
+            <input type="text" style="margin-left:50px; width:350px;" class="ide fs-4 ps-4" placeholder=" Mobile Number*" >
+            <input type="text" style="margin-left:50px; width:350px;" class="ide fs-4 ps-4" placeholder=" Email Address*" >
+            <span class="fs-4 text-center pt-5" style="color:#755968;"><input type="checkbox" style="height:20px; width:20px; border-color:#755968;"> I agree that my submitted data is being collected and stored.</span>
+            <button class="btn fs-5 text-center" style="height:65px; margin-left:650px; margin-top:20px; width:200px; background:#fd8f8f; color:#694c5c; border-radius:30px">Join Now</button>
+        </div>
+        <div class="row programs mx-1" style="">
+            <div class="col-6 p-0 m-0 l1">
+                <!--                <img src="{% static 'images/v22.jpg' %}" height="900px" width="920px" >-->
+                <div class="row">
+                    <h1 style="color:white;padding-left:100px;padding-top:600px; font-size:50px;">Dealing with
+                        Uncertainty<br>and Distress of Daily<br> Routine</h1>
+                    <button
+                        style="color:white; height:70px; width:150px; border:none; background:#db4242;font-size:20px;margin-left:100px;border-radius:25px;">Read
+                        More</button>
+                </div>
+            </div>
+            <div class="col-6 p-0 m-0">
+                <div class="row">
+                    <div class="col-lg-12 p-0 m-0 l2 ">
+                        <!--                        <img src="{% static 'images/v20.jpg' %}"  height="450px" width="920px" >-->
+                        <div class="row">
+                            <h1 style="color:white;padding-left:100px;padding-top:300px;">Indian Mantras for Meditation
+                            </h1>
+                            <button
+                                style="color:white; height:70px; width:150px; border:none; background:#db4242;font-size:20px;margin-left:100px;border-radius:25px;">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 p-0 m-0 l3">
+                        <!--                        <img src="{% static 'images/v26.jpg' %}"  height="450px" width="920px" >-->
+                        <div class="row">
+                            <h1 style="color:white;padding-left:100px;padding-top:250px;">Understand Concepts with
+                                the<br> Orthodox Interpretation</h1>
+                            <button
+                                style="color:white; height:70px; width:150px; border:none; background:#db4242;font-size:20px;margin-left:100px;border-radius:25px;">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
