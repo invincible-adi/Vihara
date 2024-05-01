@@ -15,12 +15,36 @@ Technologies Used<br>
 Frontend: HTML, CSS, JavaScript,<br>
 Backend: Django Framework, MS Sql<br>
 
-Installation<br>
-To run the Event Management Website locally, follow these steps:<br>
 
-Clone the repository: git clone https://github.com/invincible-adi/Vihara.git<br>
-Install dependencies: npm install <br>
-Start the development server: npm start<br>
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/invincible-adi/Eventica.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd eventica
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Apply database migrations:
+   ```bash
+   python manage.py migrate
+   ```
+
+5. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+6. Access the website at [http://localhost:8000](http://localhost:8000)
+
 Contributing<br>
 Contributions are welcome! Please follow these steps to contribute:<br>
 
